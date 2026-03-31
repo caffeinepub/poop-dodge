@@ -298,7 +298,7 @@ export default function GameCanvas({
         startX: 0,
         currentX: 0,
         baseX: w / 2,
-        baseY: groundY - 70,
+        baseY: groundY + 20,
         pointerId: -1,
       };
     }
@@ -546,7 +546,7 @@ export default function GameCanvas({
       }
       // Update joystick base position on resize
       joystickRef.current.baseX = width / 2;
-      joystickRef.current.baseY = groundY - 70;
+      joystickRef.current.baseY = groundY + 20;
     });
     observer.observe(container);
     return () => observer.disconnect();
